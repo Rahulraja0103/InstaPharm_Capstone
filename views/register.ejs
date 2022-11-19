@@ -1,0 +1,82 @@
+<% 
+  var inputFName = '';
+  var inputEmail = '';
+  var inputLName = '';
+  var inputPhoneNumber = '';
+  var inputGender = '';
+  var inputDOB = '';
+  var inputPassword = '';
+  var inputconfirmpassword = '';
+  
+  if(typeof(userData) != 'undefined'){
+    inputFName = userData.fname;
+    inputEmail = userData.email;
+    inputLName = userData.lname;
+    inputPhoneNumber = userData.phoneNumber;
+   inputGender = userData.gender;
+   inputDOB = userData.DOB;
+   inputPassword = userData.password;
+   inputconfirmpassword = userData.confirmpassword ;
+    // inputMonitors = userData.monitors;
+  }
+%>
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('partials/meta.ejs') %>
+    <title>Medical Store</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <section class="upper">
+    <!-- <h1 class="upper" >Create Your Order!</h1> -->
+  </section>
+  <section class="formView">
+    <form name="myform" method="Post" onsubmit=""  action="register" enctype="multipart/form-data" >
+       <!-- <label>Customer Name*</label><br/>
+      <input id="name" placeholder="First and Last Name" type="text" name="name" value=""><br/>  -->
+
+      <label>First Name*</label><br/>
+      <input id="fname" placeholder="First Name" type="text" name="fname" value="<%= inputFName %>"><br/>
+      
+      <label>Last Name*</label><br/>
+      <input id="lname" placeholder="Last Name" type="text" name="lname" value="<%= inputLName %>"><br/>
+
+      <label>Phone Number*</label><br/>
+      <input id="phoneNumber" placeholder="Phone Number" type="text" name="phoneNumber" value="<%= inputPhoneNumber %>"><br/>
+
+      <label>Gender*</label><br/>
+      <input id="gender" placeholder="Gender" type="text" name="gender" value="<%= inputGender %>"><br/>
+
+      <label>Date Of Birth*</label><br/>
+      <input id="dob" placeholder="DOB" type="date" name="dob" value="<%= inputDOB %>"><br/>
+ 
+      <label>Email*</label><br/>
+      <input id="email" placeholder="Email" type="text" name="email" value="<%= inputEmail %>"><br/>
+
+      <label>Password*</label><br/>
+      <input id="password" placeholder="password" type="text" name="password" value="<%= inputPassword %>"><br/>
+
+      <label>Confirm Password*</label><br/>
+      <input id="confirmpassword" placeholder="confirm password" type="text" name="confirmpassword" value="<%= inputconfirmpassword %>"><br/>
+
+      
+      <br/><br/>
+      <input type="submit" value="Submit">
+      <p id="errors">
+        <% 
+          if (typeof(errors) != 'undefined') {
+            for (var error of errors) {
+              %>
+              <%= error.msg %> <br>
+              <%
+            }
+          }
+          %> 
+      </p>
+    </form>  
+</section>
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>

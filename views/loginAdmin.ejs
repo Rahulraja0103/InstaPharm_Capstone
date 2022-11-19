@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/meta.ejs') %>
+    <title>Login</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+
+    <!-- <h1 class="upper">Login</h1> -->
+</section>
+<section class="formView">
+  <form name="myform" method="Post"  action="loginAdmin" >
+    <label>UserName</label><br/>
+    <input id="userName" placeholder="UserName" type="text" name="userName"><br/>
+
+    <label>Password</label><br/>
+    <input id="userPassword" placeholder="********" type="password" name="userPassword"><br/>
+
+   
+    <br/><br/>
+    <input type="submit" value="Login">
+    <div class="register_view">
+      <label style="width: 100px;">New User?</label>
+      <a style="padding-left: 0px;" href="/register">Sign UP!</a>
+      
+    </div>
+    <div>
+        <a href="/login">Customer Login</a>
+      </div>
+    
+    <p id="errors">
+      <% 
+        if (typeof(errors) != 'undefined') {
+          for (var error of errors) {
+            %>
+            <%= error.msg %> <br>
+            <%
+          }
+        }
+        %> 
+    </p>
+  </form>  
+</section>
+    
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

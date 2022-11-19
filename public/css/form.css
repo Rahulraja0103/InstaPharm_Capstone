@@ -1,0 +1,323 @@
+body{
+  background-color: #8ac114;
+  font-family: cursive;
+  font-size: 20px;
+  margin: 20px;
+  /* border: 2px solid #bc2990; */
+  /* box-shadow: 0 0 5px #640606; */
+  
+}
+/* main .wrapper input{
+  background-color: transparent;
+  border: 1px solid #c51d0a;
+  color: white;
+  font-size: 10px;
+} */
+.upper{
+  text-align: center;
+  color: black;
+}
+.headerLogo{
+width: 100px;
+height: 80px;
+float: left;
+top: 20px;
+}
+
+div .btn-group {
+display:inline-block;
+
+}
+
+a{
+padding: 20px;
+text-decoration: none;
+/* margin: 42px; */
+}
+
+div .register_view {
+text-align: center;
+width: 100px;
+}
+
+.grid{
+display: grid;
+grid-row-gap: 0;
+grid-column-gap: 30px;
+margin: 30px 0;
+}
+.cards{
+box-shadow: 0 0 10px #474168;
+padding: 20px;
+border-radius: 10px;
+}
+.imgCards{
+width: 300px;
+height: 350px;
+}
+.imgCards1{
+width: 600px;
+height: 350px;
+}
+
+.grid2{
+grid-template-columns: 1fr;
+}
+.grid2{
+grid-template-columns: 1fr 1fr;
+}
+form, .formView{
+  margin: 10px;
+}
+.clear{
+  clear: both;
+}
+#errors{
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+
+}
+form, .formData{
+  width: 300px;
+  border: 3px solid white;
+  box-shadow: 0 0 10px #2c2c2c;
+  padding: 50px;
+  margin: 40px auto;
+  color: white;
+  background-color: #bc2990;
+  border-radius: 20px;
+  font-family: cursive;
+}
+label{
+  width: 200px;
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+}
+/*
+input[type='file']{
+  color:white;
+  font-size:35px;
+  width: 100%;
+  
+}
+*/
+/* input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #a29bfe;
+  transition: 1s;
+  width:fit-content;
+} */
+input:not([type="radio"]), select{
+  font-size: 16px;
+  font-family: 'Kalam', cursive;
+  padding: 5px 10px;
+}
+input:not([type="radio"]){
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+} 
+select{
+  width: 190px;
+  margin-top: 10px;
+}
+input[type="submit"]{
+  width: 100%;
+  font-size: 22px;
+  background-color: rgb(77, 77, 193);
+  color: white;
+  font-family:  cursive;
+  border: 0px;
+  padding: 10px;
+  height: 50px;
+  box-shadow: 4px 4px 0px #8c087a;
+  border-radius: 8px;
+}
+input[type="submit"]:active{
+  box-shadow: -4px -4px 0px #8c087a;
+}
+
+/* footer{
+  text-align: center;
+  border: 2px solid black;
+  height: 50px;
+  margin-top: 20px;
+  padding-top: 2px;
+} */
+
+.header img{
+  width: 100px;
+  height: 100px;
+  float: left;
+  top: 20px;
+ /* position: absolute;
+  left: 0px;*/
+  
+}
+img{
+  width: 100px;
+  height: 100px;
+ /* position: absolute;
+  left: 0px;*/
+  
+}
+
+.header h1{
+  position:relative;
+  top: 20px;
+  /* left: 20px; */
+  color: black;
+  font-family: cursive;
+  text-align: left;
+}
+footer {
+  margin-top: 80px;
+  /* height: 50px; */
+  text-align: center;
+  /* background-color:  saddlebrown; */
+  padding-top: 2px;
+  border: 3px solid #2990bc;
+  box-shadow: 0 0 10px #2c2c2c;
+}
+
+/* body.card main{
+  background-size: cover;
+  padding-bottom: 40px;
+  
+  background-color: #8ac114;
+  text-align: center;
+}  */
+
+.viewImage{
+width: 50%;
+margin-bottom: 30px;
+}
+table {
+  /* margin-top: 20px; */
+  border: 3px solid black;
+  border-collapse: collapse;
+  /* height: 500px; */
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
+table .withoutBorder {
+  margin-top: 20px;
+}
+td,th {
+  border: 3px solid black;
+  padding: 5px;
+}
+/* td , th , .withoutBorder{
+  border: 0px;
+   padding: 10px ; 
+  text-align: center;
+} */
+div {
+  text-align: center;
+   margin-bottom: 10px; /*for  cards on home screen margin btw upper n lower cards*/
+}
+
+body {
+  background-color:#c27bbf;
+  /* 8ac114 */
+}
+body nav{
+  text-align: center;
+  color: #bc2990;
+  
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  border: 3px solid #2990bc;
+  height: 60px;
+  box-shadow: 0 0 10px #2c2c2c;
+}
+nav ul li{
+  display: inline-block;
+  padding: 5px;
+  text-decoration-color: black;
+  font-size:large;
+  font-weight:bolder;
+  
+}
+nav ul a{
+  color: black;
+  display:  inline-block;  
+  padding: 10px 30px;
+  text-decoration: none;
+  
+}
+nav ul li a{
+  list-style-type: none;
+} 
+nav li a:hover{
+background-color: white;
+color: #474168;
+}
+/* hide the sub menu  */
+nav ul li ul{
+display: none;
+}
+/* show the sub menu on mouse over on the parent */
+nav ul li:hover ul{
+display: block;
+}
+nav ul li{
+position: relative;
+}
+nav ul ul{
+position: absolute;
+background-color: #c2bce5;
+padding:0;
+/* top: 63px; */
+border: 2px solid white;
+box-shadow: 0 0 10px #474168;}
+
+nav ul ul li{
+display: block;
+width: 250px;
+}
+nav ul ul li a{
+display: block;
+}
+/* ul ul li{
+display: block;
+width: 200px;
+}
+
+ul ul li a{
+display: block;
+} */
+body .heroimage{
+/* padding: 0px; */
+margin: 0px;
+width: 100%;
+/* display:  inline-block; */
+/* width: 1200px; */
+height: 350px;
+  /* border: 2px solid #bc2990; */
+  /* box-shadow: 0 0 5px #640606; */
+}
+
+.allTicketsTH {
+border: 1px solid #000550;
+padding: 10px;
+background-color: rgb(65, 63, 63);
+color: white;
+}
+.covidTD {
+border: 1px solid #000550;
+padding: 10px;
+
+}

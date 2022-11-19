@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/meta.ejs') %>
+    <title>Product Details</title>
+</head>
+<body>
+    <%- include('partials/navlogOut.ejs') %>
+<h1>Product Details</h1>
+
+<section>
+    <div class="cardData">
+      
+      <table>
+        <tr>
+          <td><%= productName %></td>
+        </tr>
+        <tr>
+          <td><img src="/uploads/<%=productImageName %>" alt=""></td>
+        </tr>
+        <tr>
+          <td><%= offerprice %></td>
+        </tr>
+      </table>
+      
+    </div>
+</section>
+    
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

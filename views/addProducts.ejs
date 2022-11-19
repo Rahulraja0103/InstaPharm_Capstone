@@ -1,0 +1,81 @@
+<% 
+  var inputproductName = '';
+  var inputproductImage = '';
+  var inputproductType = '';
+  var inputofferPrice = '';
+  var inputmRP = '';
+  var inputcategory = '';
+  var inputcountryOfOrigin = '';
+
+  if(typeof(userData) != 'undefined'){
+    productName = userData.productname;
+    productImageName = userData.productimage
+    productType = userData.productType;
+    offerPrice = userData.offerPrice;
+    mRP = userData.mrp;
+    category = userData.category;
+    countryOfOrigin = userData.countryOfOrigin;
+    // inputMonitors = userData.monitors;
+  }
+%>
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('partials/meta.ejs') %>
+    <title>Medical Store</title>
+</head>
+<body>
+  <%- include('partials/navlogOut.ejs') %>
+  <section class="upper">
+    <!-- <h1 class="upper" >Create Your Order!</h1> -->
+  </section>
+  <section class="formView">
+    <form name="myform" method="Post" onsubmit=""  action="addProducts" enctype="multipart/form-data" >
+      <label>Product Name*</label><br/>
+      <input id="productname" placeholder="Name" type="text" name="productname" value="<%= inputproductName %>"><br/>
+
+      <label>Product Image*</label><br/>
+      <input id="productimage" placeholder="Image" type="file" name="productimage" value="<%= inputproductImage %>"><br/>
+      
+      <label>Product Type*</label><br/>
+      <input id="productType" placeholder="Type" type="text" name="productType" value="<%= inputproductType %>"><br/>
+
+      <label>offer Price *</label><br/>
+      <input id="offerPrice" placeholder="$$$" type="text" name="offerPrice" value="<%= inputofferPrice %>"><br/>
+
+      <label>Mrp*</label><br/>
+      <input id="mRP" placeholder="$$$" type="text" name="mRP" value="<%= inputmRP %>"><br/>
+
+      <label>Category*</label><br/>
+      <input id="category" placeholder="category" type="text" name="category" value="<%= inputcategory %>"><br/>
+ 
+      <label>Country Of origin*</label><br/>
+      <input id="countryOfOrigin" placeholder="country" type="text" name="countryOfOrigin" value="<%= inputcountryOfOrigin %>"><br/>
+
+      <!--
+      <label>Password*</label><br/>
+      <input id="password" placeholder="password" type="text" name="password" value="inputPassword"><br/>
+
+      <label>Confirm Password*</label><br/>
+      <input id="confirmpassword" placeholder="confirm password" type="text" name="confirmpassword" value=" inputconfirmpassword"><br/>
+      -->
+      
+      <br/><br/>
+      <input type="submit" value="Submit">
+      <p id="errors">
+        <% 
+          if (typeof(errors) != 'undefined') {
+            for (var error of errors) {
+              %>
+              <%= error.msg %> <br>
+              <%
+            }
+          }
+          %> 
+      </p>
+    </form>  
+</section>
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
