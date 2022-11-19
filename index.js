@@ -100,6 +100,16 @@ myApp.get('/print/:productid', function(req, res){
     });
 })
 
+//added new feature to print customer
+myApp.get('/print/:Customerid', function(req, res){
+    // --------add some logic to put this page behind login---------
+    // write some code to fetch a card and create pageData
+    var Customerid = req.params.Customerid;
+    Customers.findOne({_id: Customerid}).exec(function(err, customers){
+        res.render('CustomerDetails', product); // render card.ejs with the data from card
+    });
+})
+
 myApp.get('/generalMedicines', function(req, res){
     res.render('generalMedicines');
 });
