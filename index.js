@@ -238,23 +238,6 @@ myApp.get('/viewrequests',function(req, res){
    }
 });
 
-
-// Delete a request from the database
-myApp.get('/delete/:orderid',function(req, res){
-
-    if (req.session.loggedIn){
-    var orderID = req.params.orderid
-    Customers.findByIdAndDelete({_id: orderID}).exec(function(err, customers){
-        res.render('deleterequest'); // will render deleterequest.ejs
-    });
-   }
-   else{
-    res.redirect('/login');
-   }
-});
-
-
-
 // show logout view
 myApp.get('/logout',function(req, res){
     res.render('/logout');
